@@ -6,16 +6,19 @@
      "author": "Clay Smith",
      "license": "MIT",
      "scripts": {
-          "test": "mocha --require babel-register tests/*.js --exit",
-          "dev": "nodemon --exec babel-node --presets babel-preset-env ./server.js"
+          "test": "mocha --require @babel/register tests/*.js --exit",
+          "dev": "nodemon --exec babel-node --presets @babel/preset-env ./index.js"
      },
      "dependencies": {
+          "@babel/register": "^7.9.0",
           "body-parser": "^1.18.3",
           "express": "^4.16.3"
      },
      "devDependencies": {
           "@babel/cli": "^7.8.4",
-          "babel-preset-env": "^1.7.0",
+          "@babel/core": "^7.9.6",
+          "@babel/node": "^7.8.7",
+          "@babel/preset-env": "^7.9.6",
           "chai": "^4.1.2",
           "chai-http": "^4.0.0",
           "mocha": "^5.1.1",
