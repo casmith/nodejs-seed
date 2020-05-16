@@ -6,10 +6,9 @@ pipeline {
         dockerImage = ''
     }
 
-    agent { docker { image 'node:latest' } }
-
     stages {
         stage('build') {
+            agent { docker { image 'node:latest' } }
             steps {
                 sh 'npm install'
                 sh 'npm test'
