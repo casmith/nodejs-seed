@@ -5,7 +5,7 @@ pipeline {
         registryCredential = 'dockerhub'
         dockerImage = ''
     }
-    agent any
+    agent none
     stages {
         stage('build') {
             agent { docker { image 'node:latest' } }
@@ -23,6 +23,7 @@ pipeline {
             }
         }
         stage('Deploy Image') {
+            agent any
             steps{
                 script {
                     docker.withRegistry( '', registryCredential ) {
@@ -32,6 +33,7 @@ pipeline {
             }
         }
         stage('Remove Unused docker image') {
+            agent any
             steps {
                 sh "docker rmi $registry:$BUILD_NUMBER"
             }
