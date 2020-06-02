@@ -1,9 +1,11 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
-import app from '../server';
+import Server from '../server';
 
 chai.use(chaiHttp);
 chai.should();
+
+const app = new Server();
 
 describe("Officers", () => {
     describe("GET /", () => {
