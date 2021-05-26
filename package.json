@@ -10,18 +10,18 @@
           "dev": "nodemon --exec babel-node --presets @babel/preset-env ./index.js"
      },
      "dependencies": {
-          "@babel/register": "^7.10.4",
+          "@babel/register": "^7.10.5",
           "body-parser": "^1.18.3",
           "express": "^4.16.3"
      },
      "devDependencies": {
-          "@babel/core": "^7.10.4",
+          "@babel/core": "^7.11.0",
           "@babel/cli": "^7.10.5",
           "@babel/node": "^7.10.4",
           "@babel/preset-env": "^7.10.4",
           "chai": "^4.1.2",
           "chai-http": "^4.0.0",
-          "mocha": "^8.0.1",
+          "mocha": "^8.1.0",
           "nodemon": "^2.0.4"
      }
 }
